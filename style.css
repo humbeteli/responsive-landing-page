@@ -1,5 +1,326 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background-color: rgb(245, 245, 245);
+
+   
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 60px;
+}
+
+#logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #5963fa;
+}
+
+.melumatlar {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.melumatlar a {
+  color: black;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.melumatlar a:hover {
+  color: #5963fa;
+}
+
+#menu-btn {
+  display: none;
+}
+
+#hero {
+  background-color: #e7efff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.hero-cont a {
+  background-color: #5963fa;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero-cont a:hover {
+  box-shadow: 0 0 20px rgba(89, 99, 250, 0.6);
+}
+
+.title {
+  text-align: center;
+  margin: 50px;
+}
+
+#haqqimizda {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.about-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.about1 p {
+  max-width: 100%;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.about1 h4 {
+  margin-bottom: 10px;
+}
+
+.ugurlar {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.link-metni {
+  padding: 10px 20px;
+  border-left: 5px solid red;
+  background-color: rgb(252, 220, 220);
+  border-radius: 6px;
+}
+
+.link-metni a {
+  color: black;
+}
+
+#qaleri {
+  display: flex;
+  padding: 60px 0;
+}
+
+.layiheler {
+  background-color: white;
+  width: 250px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.layiheler h2 {
+  color: #5963fa;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.images {
+  columns: 3;
+  column-gap: 16px;
+}
+
+.images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  break-inside: avoid;
+}
+
+#elaqe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+  margin-bottom: 50px;
+}
+
+.kontakt {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: white;
+  padding: 30px;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.kontakt input,
+.kontakt textarea {
+  padding: 10px;
+  border: 1px solid rgb(176, 176, 176);
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.kontakt input:hover,
+.kontakt textarea:hover {
+  border-color: #a4c7ff;
+}
+
+.kontakt input:focus,
+.kontakt textarea:focus {
+  border-color: #5963fa;
+  box-shadow: 0 0 0 3px rgba(89, 99, 250, 0.15);
+}
+
+.kontakt textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.kontakt label {
+  font-weight: 600;
+}
+
+.form-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#gonder-btn {
+  background-color: #5963fa;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#gonder-btn:hover {
+  box-shadow: 0 0 20px rgba(89, 99, 250, 0.6);
+}
+
+footer {
+  background-color: #00032d;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  nav {
+    padding: 18px 20px;
+  }
+
+  .melumatlar {
+    display: none;
+  }
+
+  #menu-btn {
+    display: block;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .hero-cont h1 {
+    font-size: 32px;
+    padding: 0 20px;
+  }
+
+  .hero-cont p {
+    font-size: 16px;
+  }
+
+  .about-cont {
+    flex-direction: column;
+  }
+
+  .ugurlar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .link-metni a {
+    color: black;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+  .layiheler {
+    width: 100%;
+  }
+
+  .images {
+    columns: 1;
+  }
+
+  .kontakt {
+    width: 100%;
+  }
+
+  .title {
+    margin: 30px 0;
+  }
+
+  #elaqe {
+    margin: 0 10px;
+  }
 }
