@@ -250,6 +250,13 @@ nav {
   box-shadow: 0 0 20px rgba(89, 99, 250, 0.6);
 }
 
+.error-message {
+  display: block;
+  color: red;
+  font-size: 14px;
+  margin-top: 2px;
+}
+
 footer {
   background-color: #00032d;
   color: white;
