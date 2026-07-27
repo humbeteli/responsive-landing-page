@@ -24,7 +24,7 @@ Bu layihə DevJoint Frontend Internship proqramının 1-ci həftə tapşırığ�
 1. Repository-ni klonlayın
 
 ```bash
-git clone REPO_LINK
+git clone https://github.com/humbeteli/responsive-landing-page
 ```
 
 2. Layihə qovluğunu açın.
@@ -36,6 +36,12 @@ git clone REPO_LINK
 Layihənin ekran görüntülərini `screenshots` qovluğunda tapa bilərsiniz.
 
 ```
-desktop.png
-mobile.png
+## Desktop
+
+![Desktop](./screenshots/desktop.png)
+
+## Mobile
+
+![Mobile](./screenshots/mobile.jpeg)
+
 ```
