@@ -35,7 +35,6 @@ git clone https://github.com/humbeteli/responsive-landing-page
 
 Layihənin ekran görüntülərini `screenshots` qovluğunda tapa bilərsiniz.
 
-```
 ## Desktop
 
 ![Desktop](./screenshots/desktop.png)
@@ -43,5 +42,3 @@ Layihənin ekran görüntülərini `screenshots` qovluğunda tapa bilərsiniz.
 ## Mobile
 
 ![Mobile](./screenshots/mobile.jpeg)
-
-```
