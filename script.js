@@ -17,9 +17,11 @@ menuBtn.addEventListener("click", () => {
   if (menu.classList.contains("active")) {
     menuBtn.textContent = "✕";
     menuBtn.setAttribute("aria-label", "Menyunu bağla");
+    menuBtn.setAttribute("aria-expanded", "true");
   } else {
     menuBtn.textContent = "☰";
     menuBtn.setAttribute("aria-label", "Menyunu aç");
+    menuBtn.setAttribute("aria-expended", "false");
   }
 });
 
@@ -45,6 +47,7 @@ navLinks.forEach((link) => {
     menu.classList.remove("active");
     menuBtn.textContent = "☰";
     menuBtn.setAttribute("aria-label", "Menyunu aç");
+    menuBtn.setAttribute("aria-expanded", "false");
   });
 });
 

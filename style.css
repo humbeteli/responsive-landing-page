@@ -218,7 +218,7 @@ nav {
 #haqqimizda,
 #qaleri,
 #elaqe {
-  scroll-margin-top: 70px;
+  scroll-margin-top: 20px;
 }
 
 .kontakt {
@@ -295,6 +295,14 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #5963fa;
+  outline-offset: 3px;
 }
 
 /* mobil menyu */
