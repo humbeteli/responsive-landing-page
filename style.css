@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family:
     system-ui,
@@ -30,20 +34,20 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: white;
+  background-color: white;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 60px;
+  padding: 0 20px;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 60px;
+  padding: 18px 20px;
 }
 
 #logo {
@@ -53,15 +57,14 @@ nav {
 }
 
 .melumatlar {
+  display: none;
   list-style: none;
-  display: flex;
-  gap: 50px;
 }
 
 .melumatlar a {
   color: black;
   font-weight: 600;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .melumatlar a:hover {
@@ -69,7 +72,11 @@ nav {
 }
 
 #menu-btn {
-  display: none;
+  display: block;
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 #hero {
@@ -86,6 +93,15 @@ nav {
   align-items: center;
   text-align: center;
   gap: 20px;
+  padding: 0 20px;
+}
+
+.hero-cont h1 {
+  font-size: 32px;
+}
+
+.hero-cont p {
+  font-size: 16px;
 }
 
 .hero-cont a {
@@ -94,7 +110,7 @@ nav {
   padding: 10px 20px;
   border-radius: 4px;
   font-weight: 600;
-  transition: all 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .hero-cont a:hover {
@@ -103,7 +119,7 @@ nav {
 
 .title {
   text-align: center;
-  margin: 50px;
+  margin: 30px 0;
 }
 
 #haqqimizda {
@@ -114,9 +130,12 @@ nav {
 
 .about-cont {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.about1 {
   width: 100%;
 }
 
@@ -130,12 +149,6 @@ nav {
   margin-bottom: 10px;
 }
 
-.ugurlar {
-  display: flex;
-  gap: 20px;
-  flex-shrink: 0;
-}
-
 .link-metni {
   padding: 10px 20px;
   border-left: 5px solid red;
@@ -145,16 +158,20 @@ nav {
 
 .link-metni a {
   color: black;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
-#qaleri {
+.ugurlar {
   display: flex;
-  padding: 60px 0;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
 }
 
 .layiheler {
   background-color: white;
-  width: 250px;
+  width: 100%;
   padding: 30px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -167,18 +184,32 @@ nav {
   margin-bottom: 8px;
 }
 
+#qaleri {
+  display: flex;
+  padding: 60px 0;
+}
+
 .images {
-  columns: 3;
-  column-gap: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  position: relative;
 }
 
 .images img {
   width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 20px;
   border-radius: 8px;
-  break-inside: avoid;
+  position: relative;
+}
+
+.images img:nth-child(1) {
+  z-index: 2;
+}
+
+.images img:nth-child(2) {
+  z-index: 1;
 }
 
 #elaqe {
@@ -195,13 +226,14 @@ nav {
   gap: 30px;
   background-color: white;
   padding: 30px;
-  width: 30%;
+  width: calc(100% - 40px);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .kontakt input,
 .kontakt textarea {
+  width: 100%;
   padding: 10px;
   border: 1px solid rgb(176, 176, 176);
   border-radius: 4px;
@@ -243,7 +275,7 @@ nav {
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 #gonder-btn:hover {
@@ -264,81 +296,131 @@ footer {
   padding: 20px;
 }
 
-@media (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
-
-  nav {
-    padding: 18px 20px;
-  }
-
-  .melumatlar {
-    display: none;
-  }
-
-  #menu-btn {
-    display: block;
-    border: none;
-    background: none;
-    font-size: 28px;
-    cursor: pointer;
-  }
-
-  .hero-cont h1 {
-    font-size: 32px;
-    padding: 0 20px;
-  }
-
-  .hero-cont p {
-    font-size: 16px;
-  }
-
-  .about-cont {
-    flex-direction: column;
-  }
-
-  .ugurlar {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .link-metni a {
-    color: black;
-    overflow-wrap: break-word;
-    word-break: break-all;
-  }
-
-  .layiheler {
-    width: 100%;
-  }
-
-  .images {
-    columns: 1;
-  }
-
-  .kontakt {
-    width: 100%;
-  }
-
-  .title {
-    margin: 30px 0;
-  }
-
-  #elaqe {
-    margin: 0 10px;
-  }
-
-  .melumatlar.active {
+/* Mobil menyu */
+.melumatlar.active {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 70px;
   left: 0;
   width: 100%;
-  background: white;
+  background-color: white;
   padding: 20px;
   gap: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* Tablet */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  nav {
+    padding: 18px 40px;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  .melumatlar {
+    display: flex;
+    gap: 30px;
+  }
+
+  .hero-cont h1 {
+    font-size: 40px;
+  }
+
+  .about-cont {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .about1 {
+    flex: 1;
+  }
+
+  .ugurlar {
+    flex-direction: row;
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  .layiheler {
+    width: 200px;
+  }
+
+  .images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .images img:nth-child(2) {
+    transform: translateY(30px);
+    z-index: 2;
+  }
+
+  .images img:nth-child(3) {
+    transform: translateY(-20px);
+    z-index: 1;
+  }
+
+  .images img:nth-child(4) {
+    transform: translateY(20px);
+    z-index: 2;
+  }
+
+  .kontakt {
+    width: 70%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 60px;
+  }
+
+  nav {
+    padding: 18px 60px;
+  }
+
+  .melumatlar {
+    gap: 50px;
+  }
+
+  .hero-cont h1 {
+    font-size: 48px;
+  }
+
+  .images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .images img:nth-child(1) {
+    transform: translateY(0);
+    z-index: 2;
+  }
+
+  .images img:nth-child(2) {
+    transform: translateY(40px);
+    z-index: 3;
+  }
+
+  .images img:nth-child(3) {
+    transform: translateY(-20px);
+    z-index: 1;
+  }
+
+  .images img:nth-child(4) {
+    transform: translateY(20px);
+    z-index: 2;
+  }
+
+  .kontakt {
+    width: 30%;
+  }
 }
