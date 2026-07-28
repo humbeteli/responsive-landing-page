@@ -191,25 +191,19 @@ nav {
 
 .images {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  position: relative;
 }
 
 .images img {
   width: 100%;
-  height: auto;
-  display: block;
   border-radius: 8px;
-  position: relative;
-}
-
-.images img:nth-child(1) {
-  z-index: 2;
 }
 
 .images img:nth-child(2) {
-  z-index: 1;
+  position: relative;
+  z-index: 2;
+  transform: translateY(20px);
 }
 
 #elaqe {
@@ -296,7 +290,7 @@ footer {
   padding: 20px;
 }
 
-/* Mobil menyu */
+/* mobil menyu */
 .melumatlar.active {
   display: flex;
   flex-direction: column;
@@ -310,7 +304,7 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Tablet */
+/* tablet */
 @media (min-width: 768px) {
   .container {
     padding: 0 40px;
@@ -378,7 +372,7 @@ footer {
   }
 }
 
-/* Desktop */
+/* desktop */
 @media (min-width: 1200px) {
   .container {
     padding: 0 60px;
@@ -400,14 +394,10 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .images img:nth-child(1) {
-    transform: translateY(0);
-    z-index: 2;
-  }
-
   .images img:nth-child(2) {
-    transform: translateY(40px);
-    z-index: 3;
+    position: relative;
+    z-index: 2;
+    transform: translateY(30px);
   }
 
   .images img:nth-child(3) {
