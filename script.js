@@ -1,27 +1,27 @@
 // elementler secilir
 const menuBtn = document.getElementById("menu-btn");
-const menu = document.querySelector(".melumatlar");
+const menu = document.querySelector(".nav__list");
 const navLinks = document.querySelectorAll(
-  ".melumatlar a, .hero-cont a, #logo",
+  ".nav__list a, .hero__content a, .nav__logo",
 );
-const form = document.querySelector(".kontakt");
+const form = document.querySelector(".contact__form");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const messageInput = document.getElementById("message");
 
 // burger menyu
 menuBtn.addEventListener("click", () => {
-  menu.classList.toggle("active");
+  menu.classList.toggle("nav__list--active");
 
   // ikonu deyis
-  if (menu.classList.contains("active")) {
+  if (menu.classList.contains("nav__list--active")) {
     menuBtn.textContent = "✕";
     menuBtn.setAttribute("aria-label", "Menyunu bağla");
     menuBtn.setAttribute("aria-expanded", "true");
   } else {
     menuBtn.textContent = "☰";
     menuBtn.setAttribute("aria-label", "Menyunu aç");
-    menuBtn.setAttribute("aria-expended", "false");
+    menuBtn.setAttribute("aria-expanded", "false");
   }
 });
 
@@ -44,7 +44,7 @@ navLinks.forEach((link) => {
     }
 
     // mobil menyu aciqdirsa bagla
-    menu.classList.remove("active");
+    menu.classList.remove("nav__list--active");
     menuBtn.textContent = "☰";
     menuBtn.setAttribute("aria-label", "Menyunu aç");
     menuBtn.setAttribute("aria-expanded", "false");
@@ -56,7 +56,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  document.querySelectorAll(".error-message").forEach((error) => {
+  document.querySelectorAll(".contact__error").forEach((error) => {
     error.remove();
   });
 
@@ -93,7 +93,7 @@ form.addEventListener("submit", (e) => {
 // xeta mesaji
 function showError(input, message) {
   const error = document.createElement("small");
-  error.classList.add("error-message");
+  error.classList.add("contact__error");
   error.textContent = message;
   input.parentElement.appendChild(error);
 }
