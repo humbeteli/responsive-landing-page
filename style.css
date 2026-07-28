@@ -214,6 +214,13 @@ nav {
   margin-bottom: 50px;
 }
 
+#hero,
+#haqqimizda,
+#qaleri,
+#elaqe {
+  scroll-margin-top: 70px;
+}
+
 .kontakt {
   display: flex;
   flex-direction: column;
